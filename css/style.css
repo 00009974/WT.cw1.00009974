@@ -139,7 +139,7 @@ body {
 
 
 .main-content {
-    display: block;
+    /* display: block; */
 }
 .main-content #hero {
     background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
@@ -240,7 +240,6 @@ body {
         background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
         height: 100vh;
         width: 1000px;
-        position: absolute;
         }
 }
 
@@ -249,7 +248,6 @@ body {
     background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
     height: 100vh;
     width: 1000px;
-    position: absolute;
     }
 }
 
@@ -277,6 +275,14 @@ body {
     margin-left: 50px;
     text-align: center;
 }
+.main-content .categories .container .left-side-category .row .category-boxes img {
+    width: 200px;
+    height: 275px;
+    z-index: 9999;
+}
+
+
+
 
 
 
@@ -286,9 +292,15 @@ body {
 
 @media screen and (max-width: 900px) { 
     .main-content .categories {
+        display: block;
         width: 1000px;
         height: 2000px;
         background-image: url(../image/pattern.png);
+    }
+    .main-content .categories .container .left-side-category .row .category-boxes img {
+        width: 150;
+        height: 225px;
+        z-index: 1;
     }
 
 }
