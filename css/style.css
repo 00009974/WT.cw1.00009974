@@ -300,7 +300,6 @@ body {
     .main-content .categories .container .left-side-category .row .category-boxes img {
         width: 150;
         height: 225px;
-        z-index: 1;
     }
 
 }
