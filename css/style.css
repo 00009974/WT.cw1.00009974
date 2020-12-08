@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    box-sizing: border-box;
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #333;
+}
+.site-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 95%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-header .container .logo:hover {
+    opacity: 0.8;
+    transition: .3s;
+}
+.site-header .container .user-actions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.site-header .container .user-actions .user-action__item {
+    display: inline-block;
+    position: relative;
+}
+.site-header .container .user-actions .user-action__item:last-child {
+    margin-left: 25px;
+}
+
+.site-header .container .user-actions .user-action__item .user-action__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    display: block;
+    font-size: 18px;
+    transition: .5s;
+}
+.site-header .container .user-actions .user-action__item .user-action__link:hover {
+    color: #f34949;
+    border-bottom: 1px solid #f34949;
+}
+
+.site-header .container .user-actions .user-action__item:last-child {
+    border: 1px solid #f34949;
+    border-radius: 4px;
+
+}
+.site-header .container .user-actions .user-action__item:last-child .user-action__link {
+    color: #f34949;
+}
+.site-header .container .user-actions .user-action__item:last-child .user-action__link:hover {
+    background-color: #f34949;
+    color: #fff;
+}
+.site-header .container .user-actions .user-action__item:last-child .user-action__link:active {
+    background-color: #f74242ce;
+}
+.site-header .container .user-actions .user-action__item .submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 140px;
+    height: 117px;
+    left: 0;
+    display: none;
+    z-index: 1;
+    background-color: #333;
+}
+
+.site-header .container .user-actions .user-action__item .submenu .submenu__link {
+    display: block;
+    padding: 10px 18px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.site-header .container .user-actions .user-action__item .submenu .submenu__link:hover {
+    color: #f34949;
+    border-left: 2px solid #f34949;
+}
+
+.site-header .container .user-actions .user-action__item:hover .submenu {
+    display: block;
+    animation: slideup .3s ease;
+}
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+        
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .site-header {
+        width: 1000px;
+    }
+}
+
+
+/* from here the main sections start */
+
+
+.main-content {
+    display: block;
+}
+.main-content #hero {
+    background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    z-index: 0;
+    position: relative;
+    box-shadow: -2px 15px 15px rgba(0, 0, 0, 0.4);
+}
+.backdrop-gradient1 {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%;
+    right: 0;
+    bottom: 0; 
+    background-image: linear-gradient(0deg, #1f1e1c 0%, rgba(15, 22, 26, 0) 100%); 
+    overflow-x: hidden;
+    z-index: 0;
+}
+
+.backdrop-gradient2 {   
+    position: absolute; 
+    left: 0; 
+    z-index: 0;
+    top: 0; 
+    width: 100%;
+    right: 0;
+    bottom: 0; 
+    background-image: linear-gradient(45deg, #1f1e1c 0%, rgba(15, 22, 26, 0) 80%); 
+    overflow-x: hidden;
+}
+.main-content #hero .container .hero-wrapper {
+    width: 60%;
+    margin-top: 150px;
+    z-index: 1;
+    position: absolute;
+    
+}
+.main-content #hero .container .hero-wrapper .hero-heading {
+    width: 70%;
+    font-size: 35px;
+    line-height: 55px;
+    font-weight: 100;
+    color: rgb(238, 232, 232);
+    margin-bottom: 0px;
+    animation-name: frm-btm;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.main-content #hero .container .hero-wrapper .hero-text {
+    font-size: 20px;
+    color: rgba(238, 232, 232, 0.788);
+    font-weight: 100;
+    margin-bottom: 40px;
+    animation-name: frm-btm;
+    animation-duration: 2.4s;
+    animation-timing-function: ease-in-out;
+}
+.main-content #hero .container .hero-wrapper .hero-button {
+    text-decoration: none;
+    color: #fff;
+    width: 200px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: #f34949;
+    animation-name: frm-btm;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+.main-content #hero .container .hero-wrapper .hero-button:hover {
+    background-color: #f74242ce;
+}
+.main-content #hero .container .hero-wrapper .hero-button:active {
+    background-color: #f74242ce;
+}
+
+@keyframes frm-btm {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: 0;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .main-content #hero {
+        background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
+        height: 100vh;
+        width: 1000px;
+        position: absolute;
+        }
+}
+
+@media screen and (max-width: 600px) {
+    .main-content #hero {
+    background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
+    height: 100vh;
+    width: 1000px;
+    position: absolute;
+    }
+}
+
+
+/*from here the categories section start*/
+
+.main-content .categories {
+    padding-top: 60px;
+    height: 1000px;
+    background-image: url(../image/pattern.png);
+    width: 100%;
+    background-repeat: repeat;
+}
+.main-content .categories .container .left-side-category {
+    width: 70%;
+    float: left;
+}
+.main-content .categories .container .left-side-category .category-title {
+    border-left: 4px solid yellow;
+}
+.main-content .categories .container .left-side-category .row {
+    display: flex;
+}
+.main-content .categories .container .left-side-category .row .category-boxes {
+    margin-left: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) { 
+    .main-content .categories {
+        width: 1000px;
+        height: 2000px;
+        background-image: url(../image/pattern.png);
+    }
+
+}
+@media screen and (max-width: 600px) { 
+    .main-content .categories {
+        width: 1000px;
+        height: 2000px;
+        background-image: url(../image/pattern.png);
+    }
+
+}
