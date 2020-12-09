@@ -39,6 +39,16 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.site-header .container .logo .logo-img {
+    display: block;
+    min-width: 100px;
+    min-height: 100px;
+}
+.site-header .container .logo img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
 .site-header .container .logo:hover {
     opacity: 0.8;
     transition: .3s;
@@ -132,15 +142,112 @@ body {
     .site-header {
         width: 1000px;
     }
+    .site-header .container {
+        height: 120px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 110px;
+        width: 110px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .site-header .container {
+        height: 130px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .site-header .container {
+        height: 140px;
+    }
+    .site-header .container .logo .logo-img {
+        min-height: 120px;
+        width: 120px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .site-header .container {
+        min-height: 160px;
+    }
+    .site-header .container .logo .logo-img {
+        height: 140px;
+        width: 140px;
+    }
+}@media screen and (max-width: 600px) {
+    .site-header .container {
+        min-height: 180px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 160px;
+        width: 160px;
+
+    }
+}
+@media screen and (max-width: 550px) {
+    .site-header .container {
+        height: 200px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 180px;
+        width: 180px;
+
+    }
+}
+@media screen and (max-width: 500px) {
+    .site-header .container {
+        height: 220px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 190px;
+        width: 190px;
+
+    }
+}
+@media screen and (max-width: 450px) {
+    .site-header .container {
+        height: 240px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 220px;
+        width: 220px;
+
+    }
+}
+@media screen and (max-width: 400px) {
+    .site-header .container {
+        height: 260px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 230px;
+        width: 230px;
+
+    }
 }
 
+@media screen and (max-width: 350px) {
+    .site-header .container {
+        height: 280px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 240px;
+        width: 240px;
 
+    }
+}
+@media screen and (max-width: 300px) {
+    .site-header .container {
+        height: 300px;
+    }
+    .site-header .container .logo .logo-img{
+        height: 250px;
+        width: 250px;
+
+    }
+} 
 /* from here the main sections start */
 
 
-.main-content {
-    /* display: block; */
-}
+
 .main-content #hero {
     background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
     background-position: center top;
@@ -148,7 +255,8 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    padding-top: 100px;
+    margin-top: 60px;
+    padding-top: 80px;
     z-index: 0;
     position: relative;
     box-shadow: -2px 15px 15px rgba(0, 0, 0, 0.4);
@@ -238,16 +346,41 @@ body {
 @media screen and (max-width: 900px) {
     .main-content #hero {
         background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
-        height: 100vh;
+        height: 850px;
         width: 1000px;
         }
+        .main-content #hero .container .hero-wrapper {
+             width: 70%;
+        }
+}
+@media screen and (max-width: 800px) {
+    .main-content #hero{
+        height: 900px;
+        padding-top: 100px;
+        margin-top: 100px;
+
+    }
+    .main-content #hero .container .hero-wrapper {
+        width: 75%;
+        font-size: ;
+
+    }
+    .main-content #hero .container .hero-wrapper .hero-heading {
+        font-size: 50px;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .main-content #hero{
+        height: 1000px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
     .main-content #hero {
-    background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg');
-    height: 100vh;
-    width: 1000px;
+    background-image: url('../image/pexels-edwin-josé-vega-ramos-2039619.jpg'); 
+    height: 1100px;
     }
 }
 
@@ -266,7 +399,8 @@ body {
     float: left;
 }
 .main-content .categories .container .left-side-category .category-title {
-    border-left: 4px solid yellow;
+    border-left: 6px solid yellow;
+    padding-left: 6px;
 }
 .main-content .categories .container .left-side-category .row {
     display: flex;
@@ -278,7 +412,7 @@ body {
 .main-content .categories .container .left-side-category .row .category-boxes img {
     width: 200px;
     height: 275px;
-    z-index: 9999;
+    
 }
 
 
@@ -300,6 +434,7 @@ body {
     .main-content .categories .container .left-side-category .row .category-boxes img {
         width: 150;
         height: 225px;
+        z-index: 1;
     }
 
 }
